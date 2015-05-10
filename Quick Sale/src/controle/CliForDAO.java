@@ -17,11 +17,10 @@ public class CliForDAO {
         try {
             EntityManagerFactory factory = Persistence.createEntityManagerFactory("Quick_SalePU");
             entityManager = factory.createEntityManager();
-         
+            factory.close();
         } catch (Exception e) {
             e.getMessage();
         }     
-       // factory.close();
         return entityManager;
     }
 
